@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Starter Kit 1.0 Example Readme</title>
+</head>
+
+<body>
+
+<h1>Starter Kit 1.0 Roaming Example</h1>
+<p>This example demonstrates how to control the Robotics Starter Kit 1.0 robot 
+with the Starter Kit API. The project contains a Simulation target and a 
+Single-Board RIO target. The VIs in both targets use the same control algorithm.</p>
+<h2>Simulation Target</h2>
+<p>The Simulation target contains a VI that demonstrates how to use the Starter 
+Kit API in the Robotics Environment Simulator.</p>
+<h2>Single-Board RIO Target</h2>
+<p>The Single-Board RIO target contains a VI that demonstrates how to use the 
+Starter Kit API with a real robot.&nbsp; This example is configured to run on a 
+Single-Board RIO 9631.&nbsp; You must also configure the IP address of the RIO 
+target to match your network configuration. Select Help&gt;&gt;Search the LabVIEW Help 
+and browse to the Robotics Module&gt;&gt;Reusing Robotics Examples topic on the 
+Contents tab of the LabVIEW Help for information about adapting this example to 
+fit the target you want to use.</p>
+<p>The RIO target contains three test panel VIs you can use to test and 
+calibrate the robot:</p>
+<ul>
+	<li><strong>Calibrate Sensor Angle.vi</strong><br />
+	Run this VI to adjust the sensor servo offset angle.&nbsp; Move the slider 
+	back and forth until the sensor is facing forward, then click the Zero Angle 
+	button.&nbsp; This VI saves calibration info on the RIO target, so you 
+	should only need to run it one time, unless you reattach the sensor or 
+	reformat the target.</li>
+	<li><strong>Test Motors.vi<br />
+	</strong>Run this VI to test the motors and encoders on the robot.&nbsp; 
+	Moving the sliders should turn the wheels, and the velocities should be 
+	updated on the graph.&nbsp; Make sure to elevate the robot so the wheels are 
+	off the ground before running this VI.</li>
+	<li><strong>Test Ultrasonic Sensor.vi</strong><br />
+	Run this VI to test the ultrasonic sensor on the robot.&nbsp; Wave your hand 
+	in front of the sensor to confirm that it properly detects obstacles.</li>
+</ul>
+<h3>Deploying a Startup Executable</h3>
+<p>This example includes a startup executable that can be deployed to the robot 
+to run automatically when the robot is turned on:</p>
+<ol>
+	<li>In the project tree, locate the "Starter Kit 1.0 Roaming" item listed 
+	under "Build Specifications". This is the startup executable compiled from 
+	Starter Kit 1.0 Roaming.vi.</li>
+	<li>Right click the startup executable, and select "Run as startup". Click 
+	"Yes" when prompted to reboot the sbRIO. The startup executable will run 
+	each time the robot is turned on. It may take up to two minutes for the 
+	startup executable to run, so be patient.</li>
+</ol>
+
+</body>
+
+</html>
